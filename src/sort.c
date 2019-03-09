@@ -12,3 +12,17 @@ void insertion_sort(int32_t *array, size_t len)
 		array[j + 1] = key;
 	}
 }
+
+void selection_sort(int32_t *array, size_t len)
+{
+	for (size_t i = 0; i < len - 1; i++) {
+		size_t idx = i;
+		for (size_t j = i; j < len; j++) {
+			if (array[j] < array[idx]) {
+				idx = j;
+			}
+		}
+
+		SWAP(array[i], array[idx]);
+	}
+}
