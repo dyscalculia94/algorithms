@@ -10,6 +10,8 @@ void insertion_sort(int32_t *array, size_t len);
 
 void selection_sort(int32_t *array, size_t len);
 
+void bubble_sort(int32_t *array, size_t len);
+
 void merge_sort(int32_t *array, size_t start, size_t end);
 
 #endif

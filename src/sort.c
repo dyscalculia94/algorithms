@@ -24,9 +24,8 @@ static void merge(int32_t *array, size_t p, size_t q, size_t r)
 			else
 				temp = arr2[k++];
 		}
-		else if (j < n1) {
+		else if (j < n1)
 			temp = arr1[j++];
-		}
 		else
 			temp = arr2[k++];
 		array[p + i] = temp;
@@ -57,14 +56,20 @@ void selection_sort(int32_t *array, size_t len)
 {
 	for (size_t i = 0; i < len - 1; i++) {
 		size_t idx = i;
-		for (size_t j = i; j < len; j++) {
-			if (array[j] < array[idx]) {
+		for (size_t j = i; j < len; j++)
+			if (array[j] < array[idx])
 				idx = j;
-			}
-		}
 
 		SWAP(array[i], array[idx]);
 	}
+}
+
+void bubble_sort(int32_t *array, size_t len)
+{
+	for (size_t i = 0; i < len - 1; i++)
+		for (size_t j = i + 1; j < len; j++)
+			if (array[i] > array[j])
+				SWAP(array[i], array[j]);
 }
 
 void merge_sort(int32_t *array, size_t start, size_t end)
