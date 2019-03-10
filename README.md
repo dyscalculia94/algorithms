@@ -1,4 +1,12 @@
-# algorithms
-Algorithms from Introduction to Algorithms
+# Algorithms
+Algorithms from Introduction to Algorithms (and possibly more)
 
-To be continued...
+## Currently implemented
+
+Following is the list of all the currently implemented algorithms (in no particular order)
+
+### Sorting
+
+- Insertion sort
+- Selection sort
+- Merge sort
