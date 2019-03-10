@@ -9,4 +9,5 @@ Following is the list of all the currently implemented algorithms (in no particu
 
 - Insertion sort
 - Selection sort
+- Bubble sort
 - Merge sort
