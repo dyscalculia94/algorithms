@@ -13,6 +13,7 @@ include_directories(${ALGO_SOURCE_DIR}/inc)
 set(ALGO_SRCS
 	helper.c
 	sort.c
+	search.c
     )
 
 # ============================================================================ #
