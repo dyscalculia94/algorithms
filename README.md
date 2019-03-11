@@ -14,4 +14,5 @@ Following is the list of all the currently implemented algorithms (in no particu
 
 ### Search
 
+- Linear search
 - Binary search

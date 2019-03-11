@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+int32_t linear_search(int32_t *array, size_t len, int32_t value);
+
 int32_t binary_search(int32_t *array, size_t start, size_t end, int32_t value);
 
 #endif
