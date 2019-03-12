@@ -14,7 +14,7 @@ int32_t binary_search(int32_t *array, size_t start, size_t end, int32_t value)
 	if (end - start == 1)
 		return -1;
 
-	int idx = (end + start) / 2;
+	int idx = (start + end) / 2;
 
 	if (array[idx] == value)
 		return idx;

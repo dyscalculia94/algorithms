@@ -76,7 +76,7 @@ void merge_sort(int32_t *array, size_t start, size_t end)
 {
 	if (end - start < 2)
 		return ;
-	merge_sort(array, start, (end + start) / 2);
-	merge_sort(array, (end + start) / 2, end);
-	merge(array, start, (end + start) / 2, end);
+	merge_sort(array, start, (start + end) / 2);
+	merge_sort(array, (start + end) / 2, end);
+	merge(array, start, (start + end) / 2, end);
 }
