@@ -14,4 +14,6 @@ void bubble_sort(int32_t *array, size_t len);
 
 void merge_sort(int32_t *array, size_t start, size_t end);
 
+void quick_sort(int32_t *array, size_t start, size_t end);
+
 #endif

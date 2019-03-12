@@ -11,6 +11,7 @@ Following is the list of all the currently implemented algorithms (in no particu
 - Selection sort
 - Bubble sort
 - Merge sort
+- Quick sort
 
 ### Search
 

@@ -35,6 +35,26 @@ static void merge(int32_t *array, size_t p, size_t q, size_t r)
 	free(arr1);
 }
 
+static size_t partition(int32_t *array, size_t start, size_t end)
+{
+	int32_t pivot = array[(start + end - 1) / 2];
+	size_t i = start;
+	size_t j = end - 1;
+
+	while (1) {
+		while (array[i] < pivot)
+			i++;
+
+		while (array[j] > pivot)
+			j--;
+
+		if (i >= j)
+			return j;
+
+		SWAP(array[i], array[j]);
+	}
+}
+
 /*******************************************************************************
  *                              PUBLIC FUNCTIONS                               *
  ******************************************************************************/
@@ -76,7 +96,18 @@ void merge_sort(int32_t *array, size_t start, size_t end)
 {
 	if (end - start < 2)
 		return ;
+
 	merge_sort(array, start, (start + end) / 2);
 	merge_sort(array, (start + end) / 2, end);
 	merge(array, start, (start + end) / 2, end);
+}
+
+void quick_sort(int32_t *array, size_t start, size_t end)
+{
+	if (end - start < 2)
+		return ;
+
+	size_t p = partition(array, start, end);
+	quick_sort(array, start, p + 1);
+	quick_sort(array, p + 1, end);
 }
